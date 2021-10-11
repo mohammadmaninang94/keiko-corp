@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	//Navigation menu scrollTo
 	$('header nav ul li a').click(function(event){
 		event.preventDefault();
@@ -13,15 +12,9 @@ $(document).ready(function(){
 	});
 
 	$('.app_link').click(function(e){
-		event.preventDefault();
+		e.preventDefault();
 		$(window).scrollTo({top:$("#hero").position().top, left:'0px'}, 1000);		
 	});
-
-
-
-
-
-
 
 
 	//Show & Hide menu on mobile
@@ -29,13 +22,6 @@ $(document).ready(function(){
 		$('header nav').toggleClass('show');
 		$('header .burger_icon').toggleClass('active');
 	});
-
-	
-
-
-
-
-
 
 	//wow.js on scroll animations initialization
 	wow = new WOW(
@@ -48,40 +34,20 @@ $(document).ready(function(){
 	wow.init();
 
 
-
-
-
-
-
-
 	//parallax effect initialization
 	$('.hero').parallax("50%", 0.3);
 
-
-
-
-
-
-
-
 	//Nice scroll initialization
-	$("html").niceScroll({
-		scrollspeed: 50,
-		autohidemode : false,
-		cursorwidth : 8,
-		cursorborderradius: 8,
-		cursorborder : "0",
-		background : "rgba(48, 48, 48, .4)",
-		cursorcolor : '#1f1f1f',
-		zindex : 999
-	});
-
-
-
-
-
-
-
+	// $("html").niceScroll({
+	// 	scrollspeed: 50,
+	// 	autohidemode : false,
+	// 	cursorwidth : 8,
+	// 	cursorborderradius: 8,
+	// 	cursorborder : "0",
+	// 	background : "rgba(48, 48, 48, .4)",
+	// 	cursorcolor : '#1f1f1f',
+	// 	zindex : 999
+	// });
 
 	//Testimonials slider initialization
 	$("#tslider").owlCarousel({
@@ -95,12 +61,6 @@ $(document).ready(function(){
 		autoPlay : true,
 		transitionStyle : "fade"
 	});
-
-
-
-
-
-
 
 	//Mailchimp subscription form initialization
 	$('#submit_form').submit(function(){
@@ -135,13 +95,6 @@ $(document).ready(function(){
 			$('#mc_submit i').removeClass(hide).addClass(show);
 	}
 
-
-
-
-
-
-
-
 	//Popup video
 	$('#play_video').click(function(e){
 		e.preventDefault();	
@@ -160,8 +113,4 @@ $(document).ready(function(){
 		});
 
 	});
-
-
-
-
 });
